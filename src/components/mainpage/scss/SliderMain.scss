@@ -1,0 +1,71 @@
+.bg__img {
+	background: url("../scss/img/zara1.png");
+	width: 255px;
+	height: 384px;
+	display: flex;
+	background-repeat: no-repeat;
+	border-radius: 2px;
+	margin-bottom: 15px;
+	justify-content: flex-end;
+}
+.slider__wrp {
+	display: flex;
+	justify-content: space-between;
+}
+.slider__title {
+	display: flex;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 36px;
+	color: #32313a;
+	cursor: pointer;
+	border: none;
+	background: none;
+	margin-bottom: 30px;
+}
+
+.slider__title:hover {
+	transition: all 300ms ease;
+	color: #ed83a8;
+}
+.slider__container {
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+}
+.slider__wrapper {
+	width: 1110px;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+}
+.slider__sub {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 18px;
+	color: #32313a;
+	cursor: pointer;
+	border: none;
+	background: none;
+	margin-bottom: 10px;
+}
+.slider__sub-text {
+	font-size: 13px;
+	line-height: 16px;
+	margin-bottom: 10px;
+}
+
+.slider__heart {
+	background: #f7f7f9;
+	border-radius: 100px;
+	width: 24px;
+	height: 24px;
+	margin: 12px 12px 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.slider__heart-item {
+	margin-top: 1px;
+	color: rgba(110, 109, 116, 1);
+}

@@ -1,0 +1,16 @@
+.header__btn-heart {
+	width: 16px;
+	height: 16px;
+	color: #ffff;
+	cursor: pointer;
+	transition: color, transform 500ms ease;
+	margin-left: 25px;
+}
+.header__btn-heart:hover,
+.header__btn-heart.active {
+	color: #ed83a8;
+	transform: scale(1.5);
+}
+.no__margin {
+	margin-left: 0;
+}

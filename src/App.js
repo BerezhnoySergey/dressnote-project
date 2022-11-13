@@ -1,24 +1,18 @@
-import logo from "./logo.svg";
 import "./App.scss";
-
+import DressnoteHeader from "./components/DressnoteHeader";
+import HeaderSale from "./components/HeaderSale";
+import MainpageHero from "./components/MainpageHero";
+import Header from "./components/Header";
+import Slider from "./components/mainpage/Slider";
 function App() {
 	return (
-		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
-		</div>
+		<>
+			<DressnoteHeader />
+			<Header></Header>
+			<HeaderSale></HeaderSale>
+			<MainpageHero></MainpageHero>
+			<Slider></Slider>
+		</>
 	);
 }
 
