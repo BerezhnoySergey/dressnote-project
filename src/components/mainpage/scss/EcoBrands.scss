@@ -1,0 +1,43 @@
+.ecobrands__container {
+	display: flex;
+	justify-content: center;
+}
+.ecobrands__wrap {
+	width: 1110px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 170px;
+}
+.story__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+.ecobrands__titile {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 46px;
+	width: 421px;
+	margin-bottom: 16px;
+	color: #32313a;
+}
+.ecobrands__text {
+	font-size: 14px;
+	line-height: 22px;
+	color: #6e6d74;
+	margin-bottom: 30px;
+	width: 444px;
+}
+.ecobrands__btn {
+	width: 190px;
+	height: 36px;
+	background: #32313a;
+	border-radius: 2px;
+	border: none;
+	color: #ffff;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 16px;
+}

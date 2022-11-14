@@ -21,11 +21,12 @@
 .maincards__container {
 	display: flex;
 	justify-content: center;
+	// @include centr-contain;
 }
 .maincards__wrap {
 	width: 1110px;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	margin: 328px 0 124px 0;
 }
 .maincards__box {

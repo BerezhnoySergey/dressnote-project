@@ -1,5 +1,11 @@
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+.glide__slide {
+	width: 25%;
+}
 .bg__img {
-	background: url("../scss/img/zara1.png");
+	background: url("../scss/img/zara1.jpg");
+	background-size: contain;
 	width: 255px;
 	height: 384px;
 	display: flex;
@@ -7,6 +13,18 @@
 	border-radius: 2px;
 	margin-bottom: 15px;
 	justify-content: flex-end;
+}
+.slider__img2 {
+	background: url("../scss/img/slider22.jpg");
+	background-size: contain;
+}
+.slider__img3 {
+	background: url("../scss/img/slider3.jpg");
+	background-size: contain;
+}
+.slider__img4 {
+	background: url("../scss/img/slider4.jpg");
+	background-size: contain;
 }
 .slider__wrp {
 	display: flex;
@@ -31,7 +49,7 @@
 .slider__container {
 	display: flex;
 	justify-content: center;
-	margin-top: 100px;
+	margin: 100px 0 100px;
 }
 .slider__wrapper {
 	width: 1110px;

@@ -1,0 +1,12 @@
+.pictureblock__container {
+	display: flex;
+	justify-content: center;
+}
+.pictureblock__img {
+	border-radius: 2px;
+}
+.pictureblock__wrap {
+	width: 1110px;
+	display: flex;
+	justify-content: space-between;
+}
