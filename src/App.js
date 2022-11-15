@@ -10,6 +10,7 @@ import EcoBrands from "./components/mainpage/EcoBrands";
 import MainPageFoto from "./components/mainpage/MainPageFoto";
 import Brands from "./components/mainpage/Brands";
 import Footer from "./components/mainpage/Footer";
+import GlideExample from "./components/other-components/SliderTest";
 function App() {
 	return (
 		<>
@@ -24,6 +25,7 @@ function App() {
 			<MainPageFoto></MainPageFoto>
 			<Brands></Brands>
 			<Footer></Footer>
+			<GlideExample></GlideExample>
 		</>
 	);
 }
