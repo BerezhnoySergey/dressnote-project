@@ -1,11 +1,11 @@
 import React from "react";
-import "./scss/Footer.scss";
-import Instagram from "./img/instagram.svg";
-import Facebook from "./img/facebook.svg";
-import Twitter from "./img/twitter.svg";
-import Pinterest from "./img/pinterest.svg";
-import Youtube from "./img/youtube.svg";
-import Dressnote from "./img/DRESSNOTE.svg";
+import "./mainpage/scss/Footer.scss";
+import Instagram from "./mainpage/img/instagram.svg";
+import Facebook from "./mainpage/img/facebook.svg";
+import Twitter from "./mainpage/img/twitter.svg";
+import Pinterest from "./mainpage/img/pinterest.svg";
+import Youtube from "./mainpage/img/youtube.svg";
+import Dressnote from "./mainpage/img/DRESSNOTE.svg";
 const Footer = () => {
 	return (
 		<>

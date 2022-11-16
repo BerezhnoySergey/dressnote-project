@@ -1,31 +1,14 @@
 import "./App.scss";
-import DressnoteHeader from "./components/DressnoteHeader";
-import HeaderSale from "./components/HeaderSale";
-import MainpageHero from "./components/MainpageHero";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Slider from "./components/mainpage/Slider";
-import PictureBlock from "./components/mainpage/PictureBlock";
-import EcoBrands from "./components/mainpage/EcoBrands";
+import Home from "./components/pages/Home";
 
-import MainPageFoto from "./components/mainpage/MainPageFoto";
-import Brands from "./components/mainpage/Brands";
-import Footer from "./components/mainpage/Footer";
-import GlideExample from "./components/other-components/SliderTest";
 function App() {
 	return (
 		<>
-			<DressnoteHeader />
-			<Header></Header>
-			<HeaderSale></HeaderSale>
-			<MainpageHero></MainpageHero>
-			<Slider></Slider>
-			<PictureBlock></PictureBlock>
-			<Slider></Slider>
-			<EcoBrands></EcoBrands>
-			<MainPageFoto></MainPageFoto>
-			<Brands></Brands>
+			<Header />
+			<Home></Home>
 			<Footer></Footer>
-			<GlideExample></GlideExample>
 		</>
 	);
 }

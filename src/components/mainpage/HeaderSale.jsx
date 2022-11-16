@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/mainpage/scss/HeaderSale.scss";
+import "./scss/HeaderSale.scss";
 const HeaderSale = () => {
 	return (
 		<div className="container__headsale">

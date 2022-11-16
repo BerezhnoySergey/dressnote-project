@@ -1,4 +1,4 @@
-import "../components/mainpage/scss/HeaderBtn.scss";
+import "./scss/HeaderBtn.scss";
 import React, { useState } from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { FiShoppingBag } from "react-icons/fi";

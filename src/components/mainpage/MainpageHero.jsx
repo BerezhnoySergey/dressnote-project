@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/mainpage/scss/MainpageHero.scss";
+import "./scss/MainpageHero.scss";
 import MainPageHeroCards from "./MainPageHeroCards";
 
 const MainpageHero = () => {

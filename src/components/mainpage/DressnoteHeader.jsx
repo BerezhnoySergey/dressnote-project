@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/mainpage/scss/DressnoteHeader.scss";
+import "./scss/DressnoteHeader.scss";
 import HeaderBtn from "./HeaderBtn";
 const DressnoteHeader = () => {
 	return (
