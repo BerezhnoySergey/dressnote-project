@@ -42,14 +42,19 @@
 .header__search-icon {
 	margin-right: 17px;
 	cursor: pointer;
-	color: #ed83a8;
+	border: none;
+	background: #ffff;
 }
-.header__search-icon:hover {
+// .header__search-icon:hover {
+// 	color: #ed83a8;
+// 	transform: scale(1.2);
+// 	transition: all 400ms linear;
+// }
+.header__search-icon-item:hover {
 	color: #ed83a8;
 	transform: scale(1.2);
-	transition: all 400ms linear;
+	transition: color, transform 500ms ease;
 }
-
 .header__search-input {
 	font-size: 13px;
 	line-height: 16px;

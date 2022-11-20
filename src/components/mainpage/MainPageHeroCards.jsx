@@ -17,7 +17,7 @@ const MainPageHeroCards = () => {
 
 					<div className="maincards__box">
 						<img
-							src="./images/mainpage/image268.jpg"
+							src="./images/mainpage/skirts.jpg"
 							alt="foto"
 							className="maincadrs__img"
 						/>
@@ -26,7 +26,7 @@ const MainPageHeroCards = () => {
 
 					<div className="maincards__box">
 						<img
-							src="./images/mainpage/image267.webp"
+							src="./images/mainpage/image267.jpg"
 							alt="foto"
 							className="maincadrs__img"
 						/>
@@ -35,7 +35,7 @@ const MainPageHeroCards = () => {
 
 					<div className="maincards__box">
 						<img
-							src="./images/mainpage/image269.webp"
+							src="./images/mainpage/image269.jpg"
 							alt="foto"
 							className="maincadrs__img"
 						/>
@@ -44,7 +44,7 @@ const MainPageHeroCards = () => {
 
 					<div className="maincards__box">
 						<img
-							src="./images/mainpage/image271.webp"
+							src="./images/mainpage/image271.jpg"
 							alt="foto"
 							className="maincadrs__img"
 						/>
@@ -53,7 +53,7 @@ const MainPageHeroCards = () => {
 
 					<div className="maincards__box">
 						<img
-							src="./images/mainpage/image270.webp"
+							src="./images/mainpage/image270.jpg"
 							alt="foto"
 							className="maincadrs__img"
 						/>

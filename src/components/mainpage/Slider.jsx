@@ -3,6 +3,9 @@ import "../mainpage/scss/SliderMain.scss";
 import { FaRegHeart } from "react-icons/fa";
 import Glide from "@glidejs/glide";
 
+// import { Glide } from "react-glide";
+// import "react-glide/lib/reactGlide.css";
+
 const Slider = () => {
 	document.querySelectorAll(".glide").forEach((element) => {
 		let glideInstance = new Glide(element, {
@@ -104,107 +107,121 @@ const Slider = () => {
 		</div>
 	);
 };
-
-// function GlideProps(props) => {
+export default Slider;
+// const GlideProps = {
 // 	autoPlay: true,
 // 	autoPlaySpeed: 3000,
 // 	infinite: true,
 // 	dots: true,
 // };
-// export function Slider() {
+// влада глайд----------------------------
+// const props = {
+// 	autoPlay: true,
+// 	autoPlaySpeed: 4000,
+// 	infinite: true,
+// 	dots: false,
+// };
+
+// function Slider() {
 // 	return (
-// 		<Glide {...props}>
-// 			<div className="slider__container">
-// 				<div className="slider__wrapper">
-// 					<button className="slider__title">New arrivals</button>
+// 		<>
+// 			<Glide {...props}>
+// <div>
+// 	<div className="slider__wrap">
+// 		<div className="bg__img ">
+// 			{" "}
+// 			<div className="slider__heart">
+// 				<FaRegHeart className="slider__heart-item"></FaRegHeart>
+// 			</div>
+// 		</div>
+// 		<button className="slider__sub">ZARA</button>
+// 		<p className="slider__sub-text">Patterned suite</p>
+// 		<p className="slider__sub-text">$75.90</p>
+// 	</div>
+// </div>
 
-// 					<div className="slider__wrp">
-// 						<div>
-// 							<div className="slider__wrap">
-// 								<div className="bg__img ">
-// 									{" "}
-// 									<div className="slider__heart">
-// 										<FaRegHeart className="slider__heart-item"></FaRegHeart>
-// 									</div>
-// 								</div>
-// 								<button className="slider__sub">ZARA</button>
-// 								<p className="slider__sub-text">Patterned suite</p>
-// 								<p className="slider__sub-text">$75.90</p>
+// 				<div>
+// 					<div className="slider__wrap">
+// 						<div className="bg__img ">
+// 							{" "}
+// 							<div className="slider__heart">
+// 								<FaRegHeart className="slider__heart-item"></FaRegHeart>
 // 							</div>
 // 						</div>
-
-// 						<div>
-// 							<div className="slider__wrap">
-// 								<div className="bg__img ">
-// 									{" "}
-// 									<div className="slider__heart">
-// 										<FaRegHeart className="slider__heart-item"></FaRegHeart>
-// 									</div>
-// 								</div>
-// 								<button className="slider__sub">ZARA</button>
-// 								<p className="slider__sub-text">Patterned suite</p>
-// 								<p className="slider__sub-text">$75.90</p>
-// 							</div>
-// 						</div>
+// 						<button className="slider__sub">ZARA</button>
+// 						<p className="slider__sub-text">Patterned suite</p>
+// 						<p className="slider__sub-text">$75.90</p>
 // 					</div>
 // 				</div>
-// 			</div>
+
+// {
+/* <div>
+				<div className="slider__wrap">
+					<div className="bg__img ">
+						{" "}
+						<div className="slider__heart">
+							<FaRegHeart className="slider__heart-item"></FaRegHeart>
+						</div>
+					</div>
+					<button className="slider__sub">ZARA</button>
+					<p className="slider__sub-text">Patterned suite</p>
+					<p className="slider__sub-text">$75.90</p>
+				</div>
+			</div> */
+// }
+
+// {
+/* <div>
+				<div className="slider__wrap">
+					<div className="bg__img ">
+						{" "}
+						<div className="slider__heart">
+							<FaRegHeart className="slider__heart-item"></FaRegHeart>
+						</div>
+					</div>
+					<button className="slider__sub">ZARA</button>
+					<p className="slider__sub-text">Patterned suite</p>
+					<p className="slider__sub-text">$75.90</p>
+				</div>
+			</div> */
+// }
 // 		</Glide>
+// 	</>
+// );
+// }
+
+// const Slide = () => {
+// 	return (
+// 		<div className="slider__container">
+// 			<div className="slider__wrapper">
+// 				<button className="slider__title">New arrivals</button>
+
+// 				<div className="slider__wrp">{Slider()}</div>
+// 			</div>
+// 		</div>
 // 	);
-// }
+// };
+// const Slider = () => {
+// 	return (
+// 		<Glide {...props}>
+// 			<div>
+{
+	/* <div className="slider__wrap">
+					<div className="bg__img ">
+						<div className="slider__heart">
+							<FaRegHeart className="slider__heart-item"></FaRegHeart>
+						</div>
+					</div>
+					<button className="slider__sub">ZARA</button>
+					<p className="slider__sub-text">Patterned suite</p>
+					<p className="slider__sub-text">$75.90</p>
+				</div> */
+}
+{
+	/* </div>
+		</Glide>
+	);
+};
 
-export default Slider;
-
-// {
-/* <div className="slider__wrap">
-						<div className="bg__img">
-							{" "}
-							<div className="slider__heart">
-								<FaRegHeart className="slider__heart-item"></FaRegHeart>
-							</div>
-						</div>
-						<button className="slider__sub">ZARA</button>
-						<p className="slider__sub-text">Patterned suite</p>
-						<p className="slider__sub-text">$75.90</p>
-					</div> */
-// }
-// {
-/* <div className="slider__wrap">
-						<div className="bg__img">
-							{" "}
-							<div className="slider__heart">
-								<FaRegHeart className="slider__heart-item"></FaRegHeart>
-							</div>
-						</div>
-						<button className="slider__sub">ZARA</button>
-						<p className="slider__sub-text">Patterned suite</p>
-						<p className="slider__sub-text">$75.90</p>
-					</div> */
-// }
-
-// {
-/* <div className="slider__wrap">
-						<div className="bg__img">
-							{" "}
-							<div className="slider__heart">
-								<FaRegHeart className="slider__heart-item"></FaRegHeart>
-							</div>
-						</div>
-						<button className="slider__sub">ZARA</button>
-						<p className="slider__sub-text">Patterned suite</p>
-						<p className="slider__sub-text">$75.90</p>
-					</div> */
-// }
-// {
-/* <div className="slider__wrap">
-						<div className="bg__img">
-							{" "}
-							<div className="slider__heart">
-								<FaRegHeart className="slider__heart-item"></FaRegHeart>
-							</div>
-						</div>
-						<button className="slider__sub">ZARA</button>
-						<p className="slider__sub-text">Patterned suite</p>
-						<p className="slider__sub-text">$75.90</p>
-					</div> */
-// }
+export default Slider; */
+}

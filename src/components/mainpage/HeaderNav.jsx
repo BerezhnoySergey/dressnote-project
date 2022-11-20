@@ -10,25 +10,28 @@ const HeaderNav = () => {
 					<a href="/" className="navbar__link">
 						New in <FiChevronDown className="navbar__link-down" />
 					</a>
-					<a href="/Clothing" className="navbar__link">
+					<a href="/" className="navbar__link">
 						Clothing <FiChevronDown className="navbar__link-down" />
 					</a>
-					<a href="/Shoes" className="navbar__link">
+					<a href="/" className="navbar__link">
 						Shoes <FiChevronDown className="navbar__link-down" />
 					</a>
-					<a href="/Accessories" className="navbar__link">
+					<a href="/" className="navbar__link">
 						Accessories <FiChevronDown className="navbar__link-down" />
 					</a>
-					<a href="/Brands" className="navbar__link">
+					<a href="/" className="navbar__link">
 						Brands <FiChevronDown className="navbar__link-down" />
 					</a>
-					<a href="/Sale" className="navbar__link navbar__link-last">
+					<a href="/" className="navbar__link navbar__link-last">
 						Sale <FiChevronDown className="navbar__link-down" />
 					</a>
 				</div>
 
 				<form className="header__search">
-					<GrSearch className="header__search-icon"></GrSearch>
+					<button className="header__search-icon">
+						{" "}
+						<GrSearch className="header__search-icon-item" />
+					</button>
 					<input
 						name="header__search"
 						type="search"

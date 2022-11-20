@@ -14,3 +14,27 @@
 .no__margin {
 	margin-left: 0;
 }
+.header__btn-user {
+	width: 16px;
+	height: 16px;
+	color: #ffff;
+	cursor: pointer;
+	transition: color, transform 500ms ease;
+	margin-left: 25px;
+}
+.header__btn-user:hover {
+	color: #ed83a8;
+	transform: scale(1.5);
+}
+.header__btn-bag {
+	width: 16px;
+	height: 16px;
+	color: #ffff;
+	cursor: pointer;
+	transition: color, transform 500ms ease;
+	margin-left: 25px;
+}
+.header__btn-bag:hover {
+	color: #ed83a8;
+	transform: scale(1.5);
+}

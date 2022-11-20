@@ -16,6 +16,10 @@
 	color: #6e6d74;
 	text-decoration: none;
 }
+.footer__nav-link:hover {
+	color: #ed83a8;
+	transition: all 300ms linear;
+}
 .footer___nav-item {
 	margin-bottom: 20px;
 }
@@ -71,11 +75,11 @@
 }
 .footer__socials-item {
 	cursor: pointer;
+	transition: color, transform 500ms ease;
 }
 .footer__socials-item:hover {
-	transition: color, transform 500ms ease;
-	color: #ed83a8;
 	transform: scale(1.2);
+	color: #ed83a8;
 }
 .footer__dress {
 	display: flex;
