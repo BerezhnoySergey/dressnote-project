@@ -1,12 +1,16 @@
 import "./App.scss";
-import Home from "./components/pages/Home";
 import { Routes, Route } from "react-router-dom";
-// import { BrowserRouter } from "react-router-dom";
+import HeaderFooter from "./components/HeaderFooter";
+import Home from "./components/pages/Home";
+import NewIn from "./components/pages/NewIn";
 
 function App() {
 	return (
 		<Routes>
-			<Route path="/" element={<Home />}></Route>
+			<Route path="/" element={<HeaderFooter />}>
+				<Route index element={<Home />} />
+				<Route path="/newIn" element={<NewIn />} />
+			</Route>
 		</Routes>
 	);
 }

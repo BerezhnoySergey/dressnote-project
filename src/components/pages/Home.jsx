@@ -6,23 +6,19 @@ import PictureBlock from "../mainpage/PictureBlock";
 import EcoBrands from "../mainpage/EcoBrands";
 import MainPageFoto from "../mainpage/MainPageFoto";
 import Brands from "../mainpage/Brands";
-import Header from "../Header";
-import Footer from "../Footer";
 
+import SliderTest2 from "../mainpage/SliderTest2";
 const Home = () => {
 	return (
 		<>
-			<Header />
 			<HeaderSale />
 			<MainpageHero />
-			<Slider></Slider>
+			<Slider />
 			<PictureBlock />
-			<Slider></Slider>
-			<EcoBrands></EcoBrands>
-			<MainPageFoto></MainPageFoto>
-			<Brands></Brands>
-			<Footer />
-			{/* <Slider></Slider> */}
+			<Slider />
+			<EcoBrands />
+			<MainPageFoto />
+			<Brands />
 		</>
 	);
 };

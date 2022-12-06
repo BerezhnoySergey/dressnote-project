@@ -1,0 +1,73 @@
+import React from "react";
+import { useEffect } from "react";
+import { getClosing } from "../../api/WomenClos";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	clothingLoading,
+	clothingLoadingSuccess,
+	clothingLoadingFailed,
+} from "../redux/actions/clothingAction";
+import Cards from "../mainpage/Cards";
+import "../newIn/newIn.scss";
+import fotonewIn from "../newIn/img/nawIn.webp";
+
+const NewIn = () => {
+	const dispatch = useDispatch();
+	const { loading, error, clothing } = useSelector((store) => store.clothing);
+
+	useEffect(() => {
+		dispatch(clothingLoading());
+		getClosing()
+			.then(({ data }) => {
+				dispatch(clothingLoadingSuccess(data));
+			})
+			.catch((error) => {
+				dispatch(clothingLoadingFailed(error.message));
+			});
+	}, []);
+
+	return (
+		<>
+			<div className="nawIn__wrap">
+				<div className="nawIn__contain">
+					<div className="nawIn__inner">
+						{loading && "loading..."}
+						<div className="fotonewIn__wrap">
+							{" "}
+							<h2 className="fotonewIn__title">New in</h2>
+							<p className="fotonewIn__subtitle">
+								This season, inside is cancelled
+							</p>
+							<img src={fotonewIn} alt="foto" className="fotonewIn__item" />
+						</div>
+
+						<button className="slider__title mb__null">New In</button>
+						<div className="newin__sub">
+							<p className="newin__sub-text">1403 items</p>
+							<p className="newin__sub-text">Sort by: Price Low-High</p>
+						</div>
+						<div className="cards__contain">
+							<div className="cards__wrapp">
+								{clothing &&
+									clothing.map(({ image, price, title }) => {
+										return (
+											<Cards image={image} price={price} title={title}></Cards>
+										);
+									})}
+
+								{error && error}
+							</div>
+						</div>
+						<div className="newin__more">
+							<p className="newin__more-text border__bm">
+								You’ve viewed 12 of 1403 products
+							</p>
+							<button className="newin__more-btn"> Load more</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</>
+	);
+};
+export default NewIn;
