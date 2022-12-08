@@ -5,18 +5,19 @@ import Glide from "@glidejs/glide";
 import { useEffect } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
+
 const glideConfig = {
 	perView: 4,
 	type: "carousel",
 	startAt: 0,
 	autoplay: 3000,
 	// keyboard: true,
-	// hoverpause: true,
-	// animationDuration: 2000,
+	hoverpause: true,
+	animationDuration: 2000,
 	animationTimingFunc: "linear",
 };
 
-const Slider = () => {
+const SliderTwo = () => {
 	const glide = new Glide(".glide", glideConfig);
 	useEffect(() => {
 		glide.mount();
@@ -27,16 +28,13 @@ const Slider = () => {
 				<div className="slider__wrp">
 					<div className="glide  ">
 						<div className="slider__arrrow-wrap">
-							<button className="slider__title">New arrivals</button>
+							<button className="slider__title">Our picks for you</button>
 							<div
 								className="glide__arrows glide__style"
 								data-glide-el="controls"
 							>
-								<button
-									className=" glide__style arrow__color"
-									data-glide-dir="<"
-								>
-									<BsArrowLeft className="arrow__glide " />
+								<button className=" glide__style" data-glide-dir="<">
+									<BsArrowLeft className="arrow__glide" />
 								</button>
 								<button className=" glide__style" data-glide-dir=">">
 									<BsArrowRight className="arrow__glide" />
@@ -54,9 +52,11 @@ const Slider = () => {
 												<FaRegHeart className="slider__heart-item"></FaRegHeart>
 											</div>
 										</div>
-										<button className="slider__sub">ZARA</button>
-										<p className="slider__sub-text">Patterned suite</p>
-										<p className="slider__sub-text">$75.90</p>
+										<button className="slider__sub">Reclaimed Vintage</button>
+										<p className="slider__sub-text">
+											Lounge style pleated suit
+										</p>
+										<p className="slider__sub-text">$82.90</p>
 									</div>
 								</li>
 
@@ -68,11 +68,9 @@ const Slider = () => {
 												<FaRegHeart className="slider__heart-item"></FaRegHeart>
 											</div>
 										</div>
-										<button className="slider__sub">Desigual</button>
-										<p className="slider__sub-text">
-											Ethnic dress with embroidery
-										</p>
-										<p className="slider__sub-text">$139.90</p>
+										<button className="slider__sub">Ted Baker</button>
+										<p className="slider__sub-text">Cropped suit in pink</p>
+										<p className="slider__sub-text">$36.90</p>
 									</div>
 								</li>
 
@@ -85,9 +83,9 @@ const Slider = () => {
 												<FaRegHeart className="slider__heart-item"></FaRegHeart>
 											</div>
 										</div>
-										<button className="slider__sub">ZARA</button>
-										<p className="slider__sub-text">Patchwork mini skirt</p>
-										<p className="slider__sub-text ">$55.90</p>
+										<button className="slider__sub">Monki</button>
+										<p className="slider__sub-text">Fine knit mini dress</p>
+										<p className="slider__sub-text ">$42.00</p>
 									</div>
 								</li>
 
@@ -100,9 +98,11 @@ const Slider = () => {
 												<FaRegHeart className="slider__heart-item"></FaRegHeart>
 											</div>
 										</div>
-										<button className="slider__sub">Monki</button>
-										<p className="slider__sub-text">Ultramarine culottes</p>
-										<p className="slider__sub-text">$62.90</p>
+										<button className="slider__sub">People tree</button>
+										<p className="slider__sub-text">Printed mini shirt dress</p>
+										<p className="slider__sub-text slider__sub-textred">
+											$35.90 <p className="slider__text-sale">$51.90</p>
+										</p>
 									</div>
 								</li>
 							</ul>
@@ -113,4 +113,4 @@ const Slider = () => {
 		</div>
 	);
 };
-export default Slider;
+export default SliderTwo;

@@ -6,8 +6,7 @@ import PictureBlock from "../mainpage/PictureBlock";
 import EcoBrands from "../mainpage/EcoBrands";
 import MainPageFoto from "../mainpage/MainPageFoto";
 import Brands from "../mainpage/Brands";
-
-import SliderTest2 from "../mainpage/SliderTest2";
+import SliderTwo from "../mainpage/SliderTwo";
 const Home = () => {
 	return (
 		<>
@@ -15,7 +14,7 @@ const Home = () => {
 			<MainpageHero />
 			<Slider />
 			<PictureBlock />
-			<Slider />
+			<SliderTwo />
 			<EcoBrands />
 			<MainPageFoto />
 			<Brands />

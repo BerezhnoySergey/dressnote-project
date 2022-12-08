@@ -46,7 +46,6 @@
 	cursor: pointer;
 	border: none;
 	background: none;
-	margin-bottom: 30px;
 }
 
 .slider__title:hover {
@@ -100,6 +99,7 @@
 	justify-content: flex-end;
 	border: none;
 	background: none;
+	cursor: pointer;
 }
 .arrow__glide {
 	width: 25px;
@@ -110,4 +110,18 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	margin-bottom: 30px;
+}
+.arrow__color {
+	color: #b5b5bc;
+	margin-right: 15px;
+}
+.slider__sub-textred {
+	color: red;
+	display: flex;
+}
+.slider__text-sale {
+	color: #b5b5bc;
+	text-decoration: line-through;
+	margin-left: 8px;
 }
