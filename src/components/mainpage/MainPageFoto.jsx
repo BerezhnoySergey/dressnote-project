@@ -3,7 +3,7 @@ import "./scss/MainPageFoto.scss";
 
 const MainPageFoto = () => {
 	return (
-		<div>
+		<div className="mainFoto">
 			<img
 				src="./images/mainpage/MainPageFoto.jpg"
 				alt="MainPageFoto.jpg"

@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getClosing } from "../../api/WomenClos";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -10,6 +10,7 @@ import {
 import Cards from "../mainpage/Cards";
 import "../newIn/newIn.scss";
 import fotonewIn from "../newIn/img/nawIn.webp";
+import { Loader } from "../../loader/Loader";
 
 const NewIn = () => {
 	const dispatch = useDispatch();
@@ -31,7 +32,6 @@ const NewIn = () => {
 			<div className="nawIn__wrap">
 				<div className="nawIn__contain">
 					<div className="nawIn__inner">
-						{loading && "loading..."}
 						<div className="fotonewIn__wrap">
 							{" "}
 							<h2 className="fotonewIn__title">New in</h2>
@@ -48,14 +48,18 @@ const NewIn = () => {
 						</div>
 						<div className="cards__contain">
 							<div className="cards__wrapp">
-								{clothing &&
+								{loading ? (
+									<Loader />
+								) : (
+									clothing &&
 									clothing.map(({ image, price, title }) => {
 										return (
 											<Cards image={image} price={price} title={title}></Cards>
 										);
-									})}
+									})
+								)}
 
-								{error && error}
+								{error && alert("Network Erorr")}
 							</div>
 						</div>
 						<div className="newin__more">
