@@ -11,6 +11,7 @@ import Cards from "../mainpage/Cards";
 import "../newIn/newIn.scss";
 import fotonewIn from "../newIn/img/nawIn.webp";
 import { Loader } from "../../loader/Loader";
+import NetworkError from "../../loader/networkError.gif";
 
 const NewIn = () => {
 	const dispatch = useDispatch();
@@ -40,8 +41,9 @@ const NewIn = () => {
 							</p>
 							<img src={fotonewIn} alt="foto" className="fotonewIn__item" />
 						</div>
-
-						<button className="slider__title mb__null">New In</button>
+						<div className="slider__titleNewIn-wrapp">
+							<button className="slider__title mb__null">New In</button>
+						</div>
 						<div className="newin__sub">
 							<p className="newin__sub-text">1403 items</p>
 							<p className="newin__sub-text">Sort by: Price Low-High</p>
@@ -59,7 +61,16 @@ const NewIn = () => {
 									})
 								)}
 
-								{error && alert("Network Erorr")}
+								{error && (
+									<div className="networkerror__contain">
+										<img
+											src={NetworkError}
+											alt="NetworkError"
+											className="networkerror__item"
+										/>
+										<p>Network Error</p>
+									</div>
+								)}
 							</div>
 						</div>
 						<div className="newin__more">
