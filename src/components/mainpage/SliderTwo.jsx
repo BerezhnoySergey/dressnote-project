@@ -5,6 +5,7 @@ import Glide from "@glidejs/glide";
 import { useEffect } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
+
 const glideConfig = {
 	perView: 4,
 	startAt: 0,
@@ -12,12 +13,12 @@ const glideConfig = {
 	type: "carousel",
 	autoplay: 2000,
 	keyboard: true,
-	// keyboard: true,
 	// hoverpause: true,
-	animationTimingFunc: "linear",
+	// animationDuration: 2000,
+	// animationTimingFunc: "linear",
 };
 
-const Slider = ({ className = "glide" }) => {
+const SliderTwo = ({ className = "glide" }) => {
 	const glide = new Glide(`.${className}`, glideConfig);
 	useEffect(() => {
 		glide.mount();
@@ -26,9 +27,9 @@ const Slider = ({ className = "glide" }) => {
 		<div className="slider__container">
 			<div className="slider__wrapper">
 				<div className="slider__wrp">
-					<div className={className}>
+					<div className={`${className} slider__width-fix`}>
 						<div className="slider__arrrow-wrap">
-							<button className="slider__title">New arrivals</button>
+							<button className="slider__title">Our picks for you</button>
 							<div
 								className="glide__arrows glide__style"
 								data-glide-el="controls"
@@ -43,64 +44,61 @@ const Slider = ({ className = "glide" }) => {
 						</div>
 
 						<div className="glide__track" data-glide-el="track">
-							<ul className="glide__slides">
+							<ul className="glide__slides ">
 								<li className="glide__slide">
 									<div className="slider__wrap">
-										<div className="bg__img ">
-											{" "}
+										<div className="bg__img slider2__img0 ">
 											<div className="slider__heart">
 												<FaRegHeart className="slider__heart-item"></FaRegHeart>
 											</div>
 										</div>
-										<button className="slider__sub">ZARA</button>
-										<p className="slider__sub-text">Patterned suite</p>
-										<p className="slider__sub-text">$75.90</p>
-									</div>
-								</li>
-
-								<li className="glide__slide">
-									<div className="slider__wrap">
-										<div className="bg__img slider__img2">
-											{" "}
-											<div className="slider__heart">
-												<FaRegHeart className="slider__heart-item"></FaRegHeart>
-											</div>
-										</div>
-										<button className="slider__sub">Desigual</button>
+										<button className="slider__sub">Reclaimed Vintage</button>
 										<p className="slider__sub-text">
-											Ethnic dress with embroidery
+											Lounge style pleated suit
 										</p>
-										<p className="slider__sub-text">$139.90</p>
+										<p className="slider__sub-text">$82.90</p>
 									</div>
 								</li>
 
 								<li className="glide__slide">
-									{" "}
 									<div className="slider__wrap">
-										<div className="bg__img slider__img3">
-											{" "}
+										<div className="bg__img slider2__img1">
 											<div className="slider__heart">
 												<FaRegHeart className="slider__heart-item"></FaRegHeart>
 											</div>
 										</div>
-										<button className="slider__sub">ZARA</button>
-										<p className="slider__sub-text">Patchwork mini skirt</p>
-										<p className="slider__sub-text ">$55.90</p>
+										<button className="slider__sub">Ted Baker</button>
+										<p className="slider__sub-text">Cropped suit in pink</p>
+										<p className="slider__sub-text">$36.90</p>
 									</div>
 								</li>
 
 								<li className="glide__slide">
-									{" "}
 									<div className="slider__wrap">
-										<div className="bg__img slider__img4">
-											{" "}
+										<div className="bg__img slider2__img2 ">
 											<div className="slider__heart">
 												<FaRegHeart className="slider__heart-item"></FaRegHeart>
 											</div>
 										</div>
 										<button className="slider__sub">Monki</button>
-										<p className="slider__sub-text">Ultramarine culottes</p>
-										<p className="slider__sub-text">$62.90</p>
+										<p className="slider__sub-text">Fine knit mini dress</p>
+										<p className="slider__sub-text ">$42.00</p>
+									</div>
+								</li>
+								<li className="glide__slide">
+									{" "}
+									<div className="slider__wrap">
+										<div className="bg__img slider2__img3">
+											{" "}
+											<div className="slider__heart">
+												<FaRegHeart className="slider__heart-item"></FaRegHeart>
+											</div>
+										</div>
+										<button className="slider__sub">People tree</button>
+										<p className="slider__sub-text">Printed mini shirt dress</p>
+										<p className="slider__sub-text slider__subtext-sale">
+											$35.90 <p className="slider__old-price">$51.90</p>
+										</p>
 									</div>
 								</li>
 							</ul>
@@ -111,4 +109,4 @@ const Slider = ({ className = "glide" }) => {
 		</div>
 	);
 };
-export default Slider;
+export default SliderTwo;

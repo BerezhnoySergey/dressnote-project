@@ -68,7 +68,7 @@ const NewIn = () => {
 											alt="NetworkError"
 											className="networkerror__item"
 										/>
-										<p>Network Error</p>
+										<p>Not found</p>
 									</div>
 								)}
 							</div>
