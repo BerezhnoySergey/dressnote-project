@@ -47,7 +47,6 @@ const Slider = ({ className = "glide" }) => {
 								<li className="glide__slide">
 									<div className="slider__wrap">
 										<div className="bg__img ">
-											{" "}
 											<div className="slider__heart">
 												<FaRegHeart className="slider__heart-item"></FaRegHeart>
 											</div>
@@ -61,7 +60,6 @@ const Slider = ({ className = "glide" }) => {
 								<li className="glide__slide">
 									<div className="slider__wrap">
 										<div className="bg__img slider__img2">
-											{" "}
 											<div className="slider__heart">
 												<FaRegHeart className="slider__heart-item"></FaRegHeart>
 											</div>
@@ -75,10 +73,8 @@ const Slider = ({ className = "glide" }) => {
 								</li>
 
 								<li className="glide__slide">
-									{" "}
 									<div className="slider__wrap">
 										<div className="bg__img slider__img3">
-											{" "}
 											<div className="slider__heart">
 												<FaRegHeart className="slider__heart-item"></FaRegHeart>
 											</div>
@@ -90,10 +86,8 @@ const Slider = ({ className = "glide" }) => {
 								</li>
 
 								<li className="glide__slide">
-									{" "}
 									<div className="slider__wrap">
 										<div className="bg__img slider__img4">
-											{" "}
 											<div className="slider__heart">
 												<FaRegHeart className="slider__heart-item"></FaRegHeart>
 											</div>

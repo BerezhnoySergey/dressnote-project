@@ -34,7 +34,6 @@ const NewIn = () => {
 				<div className="nawIn__contain">
 					<div className="nawIn__inner">
 						<div className="fotonewIn__wrap">
-							{" "}
 							<h2 className="fotonewIn__title">New in</h2>
 							<p className="fotonewIn__subtitle">
 								This season, inside is cancelled
@@ -54,9 +53,14 @@ const NewIn = () => {
 									<Loader />
 								) : (
 									clothing &&
-									clothing.map(({ image, price, title }) => {
+									clothing.map(({ image, price, title, id }) => {
 										return (
-											<Cards image={image} price={price} title={title}></Cards>
+											<Cards
+												image={image}
+												price={price}
+												title={title}
+												key={`newInItems__${id}`}
+											></Cards>
 										);
 									})
 								)}

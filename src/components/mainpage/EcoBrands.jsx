@@ -6,7 +6,6 @@ const EcoBrands = () => {
 			<div className="ecobrands__wrap">
 				<div className="story__container">
 					<h2 className="ecobrands__titile">
-						{" "}
 						Eco Aware brands: Exclusively at Dresnote
 					</h2>
 					<p className="ecobrands__text">

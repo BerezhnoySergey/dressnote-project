@@ -97,7 +97,7 @@ const SliderTwo = ({ className = "glide" }) => {
 										<button className="slider__sub">People tree</button>
 										<p className="slider__sub-text">Printed mini shirt dress</p>
 										<p className="slider__sub-text slider__subtext-sale">
-											$35.90 <p className="slider__old-price">$51.90</p>
+											$35.90 <div className="slider__old-price">$51.90</div>
 										</p>
 									</div>
 								</li>
