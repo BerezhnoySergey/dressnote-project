@@ -59,6 +59,7 @@
 	border: none;
 	border-bottom-right-radius: 2px;
 	border-top-right-radius: 2px;
+	cursor: pointer;
 }
 .email__input {
 	border-radius: 2px;
@@ -67,6 +68,7 @@
 	border: none;
 	color: #86858b;
 	padding: 10px;
+	outline: none;
 }
 .footer__socials {
 	width: 200px;

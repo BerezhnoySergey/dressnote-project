@@ -1,6 +1,6 @@
 import { createReducer } from "@reduxjs/toolkit";
 
-const clothingReducer = createReducer({}, (builder) => {
+const clothingReducer = createReducer({ clothing: [] }, (builder) => {
 	builder
 		.addCase("USER_LOADING", (store) => {
 			return { ...store, loading: true };

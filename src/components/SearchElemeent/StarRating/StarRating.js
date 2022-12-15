@@ -14,7 +14,7 @@ const Star = ({ active, id, setRate }) => {
 				className="star__item"
 				stroke="currentColor"
 				fill="currentColor"
-				stroke-width="0"
+				strokeWidth="0"
 				viewBox="0 0 16 16"
 				height="1em"
 				width="1em"
@@ -26,7 +26,7 @@ const Star = ({ active, id, setRate }) => {
 	);
 };
 
-const StarRating = ({ rate = "3" }) => {
+const StarRating = ({ rate = "3", vote = "139" }) => {
 	const [value, setValue] = useState(rate);
 	return (
 		<>
@@ -34,7 +34,9 @@ const StarRating = ({ rate = "3" }) => {
 				{[1, 2, 3, 4, 5].map((index) => (
 					<Star id={index} setRate={setValue} active={value} key={index} />
 				))}
-				<p className="text">{value} (139 reviews) </p>
+				<p className="text">
+					{value} ({vote} reviews){" "}
+				</p>
 			</div>
 		</>
 	);

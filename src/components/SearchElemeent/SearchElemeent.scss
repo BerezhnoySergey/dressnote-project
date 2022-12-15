@@ -14,6 +14,7 @@
 		width: 610px;
 		height: 900px;
 		border-radius: 2px;
+		object-fit: contain;
 	}
 	&__info-container {
 		display: flex;
@@ -25,6 +26,7 @@
 	&__subtitle {
 		color: #6e6d74;
 		margin-bottom: 8px;
+		margin-right: 8px;
 	}
 	&__price {
 		font-weight: 600;
@@ -35,9 +37,7 @@
 	&__selectcolor-wrap {
 		display: flex;
 	}
-	&__subcolor {
-		margin-left: 6px;
-	}
+
 	&__color-wrap {
 		display: flex;
 		margin: 10px 0 30px 0;
@@ -54,5 +54,16 @@
 		border-radius: 100%;
 		background: rgb(224, 54, 254);
 		margin-left: 10px;
+	}
+	&__subdetails {
+		font-size: 14px;
+		line-height: 16px;
+		color: #32313a;
+		margin-bottom: 18px;
+	}
+	&__subinfo {
+		line-height: 22px;
+		color: #86858b;
+		font-size: 14px;
 	}
 }

@@ -13,3 +13,16 @@
 	line-height: 24px;
 	text-decoration-line: underline;
 }
+
+.brands__newbalance {
+	cursor: pointer;
+	transition: color, transform 500ms ease;
+}
+.brands__newbalance:hover {
+	color: #ed83a8;
+	transform: scale(1.5);
+}
+
+.brands__link {
+	color: #32313a;
+}

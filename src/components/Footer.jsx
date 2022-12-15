@@ -122,7 +122,9 @@ const Footer = () => {
 			</div>
 			<div className="footer__dress">
 				<div className="footer__dress-wrap">
-					<img src={Dressnote} alt="Dressnote" />
+					<a href="/dressnote">
+						<img src={Dressnote} alt="Dressnote" />
+					</a>
 					<p className="footer__copyright">&copy; 2021 All rights reserved</p>
 				</div>
 			</div>

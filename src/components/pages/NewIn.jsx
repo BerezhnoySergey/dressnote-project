@@ -26,7 +26,7 @@ const NewIn = () => {
 			.catch((error) => {
 				dispatch(clothingLoadingFailed(error.message));
 			});
-	}, []);
+	}, [dispatch]);
 
 	return (
 		<>

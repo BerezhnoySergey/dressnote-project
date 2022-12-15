@@ -5,12 +5,12 @@ import { FiShoppingBag } from "react-icons/fi";
 import { FiUser } from "react-icons/fi";
 
 const HeaderBtn = () => {
-	// let [cardOpen, setCardOpen] = useState(false);${cardOpen && "active"}
+	let [cardOpen, setCardOpen] = useState(false);
 	return (
 		<div>
 			<FaRegHeart
 				className={`header__btn-heart no__margin `}
-				// onClick={() => setCardOpen(!cardOpen)}
+				onClick={() => setCardOpen(!cardOpen && "active")}
 			/>
 			<FiUser className={`header__btn-user `} />
 

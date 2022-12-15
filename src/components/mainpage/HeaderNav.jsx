@@ -1,24 +1,52 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { FiChevronDown } from "react-icons/fi";
 import { GrSearch } from "react-icons/gr";
 import "./scss/Header.scss";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { getClosing } from "../../api/WomenClos";
 import { useState } from "react";
+import {
+	clothingLoading,
+	clothingLoadingSuccess,
+	clothingLoadingFailed,
+} from "../redux/actions/clothingAction";
 
 const SearchBar = () => {
+	const [searchInput, setSearchInput] = useState("");
 	const [searchResult, setSearchResult] = useState([]);
 	const { clothing } = useSelector((store) => store.clothing);
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		if (clothing.length === 0) {
+			dispatch(clothingLoading());
+			getClosing()
+				.then(({ data }) => {
+					dispatch(clothingLoadingSuccess(data));
+				})
+				.catch((error) => {
+					dispatch(clothingLoadingFailed(error.message));
+				});
+		}
+	}, [dispatch]);
+
+	const closeSearch = () => {
+		setSearchInput("");
+		setSearchResult([]);
+	};
 
 	const searchDis = (e) => {
+		setSearchInput(e.target.value);
 		const filteredData = clothing.filter((item) => {
-			if (e.target.value == "") {
+			if (e.target.value === "") {
 				return null;
 			}
 			if (item.title.toLowerCase().includes(e.target.value.toLowerCase())) {
 				return item;
 			}
 		});
-		if (filteredData.length == 0 && e.target.value.length !== 0) {
+		if (filteredData.length === 0 && e.target.value.length !== 0) {
 			setSearchResult([
 				{
 					title: "No data",
@@ -40,11 +68,21 @@ const SearchBar = () => {
 				placeholder="Search for..."
 				className="header__search-input"
 				onChange={searchDis}
+				value={searchInput}
 			/>
 			{!!searchResult.length && (
 				<div className="header__search-result">
-					{searchResult.map(({ title }, index) => {
-						return (
+					{searchResult.map(({ title, id }, index) => {
+						return !!id ? (
+							<Link
+								to={`product/${id}`}
+								className="header__search-link"
+								onClick={closeSearch}
+								key={`srch_${index}`}
+							>
+								<p className="header__search-resitem">{title}</p>
+							</Link>
+						) : (
 							<p key={`srch_${index}`} className="header__search-resitem">
 								{title}
 							</p>
