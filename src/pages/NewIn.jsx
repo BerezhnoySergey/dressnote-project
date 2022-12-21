@@ -1,21 +1,23 @@
 import React from "react";
 import { useEffect } from "react";
-import { getClosing } from "../../api/WomenClos";
+import { getClosing } from "../api/WomenClos";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	clothingLoading,
 	clothingLoadingSuccess,
 	clothingLoadingFailed,
-} from "../redux/actions/clothingAction";
-import Cards from "../mainpage/Cards";
-import "../newIn/newIn.scss";
-import fotonewIn from "../newIn/img/nawIn.webp";
-import { Loader } from "../../loader/Loader";
-import NetworkError from "../../loader/networkError.gif";
+} from "../components/redux/actions/clothingAction";
+import Cards from "../components/mainpage/Cards";
+import "../components/newIn/newIn.scss";
+import fotonewIn from "../components/newIn/img/nawIn.webp";
+import { Loader } from "../loader/Loader";
+import NetworkError from "../loader/networkError.gif";
 
 const NewIn = () => {
 	const dispatch = useDispatch();
-	const { loading, error, clothing } = useSelector((store) => store.clothing);
+	const { loading, error, clothingWomen } = useSelector(
+		(store) => store.clothing
+	);
 
 	useEffect(() => {
 		dispatch(clothingLoading());
@@ -52,14 +54,16 @@ const NewIn = () => {
 								{loading ? (
 									<Loader />
 								) : (
-									clothing &&
-									clothing.map(({ image, price, title, id }) => {
+									clothingWomen &&
+									clothingWomen.map((item) => {
 										return (
 											<Cards
-												image={image}
-												price={price}
-												title={title}
-												key={`newInItems__${id}`}
+												value={item}
+												// image={image}
+												// price={price}
+												// title={title}
+												// description={description}
+												key={`newInItems__${item.id}`}
 											></Cards>
 										);
 									})

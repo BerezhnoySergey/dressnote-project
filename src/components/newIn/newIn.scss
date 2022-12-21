@@ -85,6 +85,12 @@
 	border-radius: 2px;
 	background: #fff;
 	margin: 25px 0 60px 0;
+	cursor: pointer;
+	&:hover {
+		background: #ed83a8;
+		transition: all 0.2s linear;
+		color: #ffff;
+	}
 }
 .newin__more-text {
 	display: flex;

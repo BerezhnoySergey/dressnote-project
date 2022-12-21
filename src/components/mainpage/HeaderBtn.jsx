@@ -1,20 +1,19 @@
 import "./scss/HeaderBtn.scss";
-import React, { useState } from "react";
+import React from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { FiShoppingBag } from "react-icons/fi";
 import { FiUser } from "react-icons/fi";
 
 const HeaderBtn = () => {
-	let [cardOpen, setCardOpen] = useState(false);
 	return (
 		<div>
-			<FaRegHeart
-				className={`header__btn-heart no__margin `}
-				onClick={() => setCardOpen(!cardOpen && "active")}
-			/>
+			<a href="/product/favorites">
+				<FaRegHeart className={`header__btn-heart no__margin `} />
+			</a>
 			<FiUser className={`header__btn-user `} />
-
-			<FiShoppingBag className={`header__btn-bag`} />
+			<a href="/shopping_bag">
+				<FiShoppingBag className={`header__btn-bag`} />
+			</a>
 		</div>
 	);
 };

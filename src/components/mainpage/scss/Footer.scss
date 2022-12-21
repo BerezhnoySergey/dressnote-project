@@ -60,6 +60,10 @@
 	border-bottom-right-radius: 2px;
 	border-top-right-radius: 2px;
 	cursor: pointer;
+	&:hover {
+		background: #ed83a8;
+		transition: all 0.2s linear;
+	}
 }
 .email__input {
 	border-radius: 2px;

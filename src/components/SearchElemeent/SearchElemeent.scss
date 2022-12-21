@@ -43,17 +43,19 @@
 		margin: 10px 0 30px 0;
 	}
 	&__red {
-		width: 70px;
-		height: 70px;
+		width: 45px;
+		height: 45px;
 		border-radius: 100%;
 		background: red;
+		cursor: pointer;
 	}
 	&__violet {
-		width: 70px;
-		height: 70px;
+		width: 45px;
+		height: 45px;
 		border-radius: 100%;
 		background: rgb(224, 54, 254);
 		margin-left: 10px;
+		cursor: pointer;
 	}
 	&__subdetails {
 		font-size: 14px;
@@ -65,5 +67,28 @@
 		line-height: 22px;
 		color: #86858b;
 		font-size: 14px;
+	}
+	&__input {
+		width: 350px;
+		height: 40px;
+		padding-left: 14px;
+		outline: none;
+	}
+	&__add-btn {
+		width: 300px;
+		height: 40px;
+		background: #32313a;
+		border-radius: 2px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 16px;
+		color: #e6e5e8;
+		border: none;
+		margin: 31px 0 43px 0;
+		cursor: pointer;
+		&:hover {
+			background: #ed83a8;
+			transition: all 0.2s linear;
+		}
 	}
 }

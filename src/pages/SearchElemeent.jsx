@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import "../SearchElemeent/SearchElemeent.scss";
-import "../SearchElemeent/StarRating/FuncStarRating.scss";
-import SliderTwo from "../mainpage/SliderTwo";
-import StarRating from "../SearchElemeent/StarRating/StarRating";
-import { Loader } from "../../loader/Loader";
+import "../components/SearchElemeent/SearchElemeent.scss";
+import "../components/SearchElemeent/StarRating/FuncStarRating.scss";
+import SliderTwo from "../components/mainpage/SliderTwo";
+import StarRating from "../components/SearchElemeent/StarRating/StarRating";
+import { Loader } from "../loader/Loader";
 
 const SearchElemeent = () => {
 	const [loading, setLoading] = useState(true);
 	const [productData, setProductData] = useState({});
 	const { id } = useParams();
-	const sizes = [
-		{
-			size: 32,
-			title: "xs",
-		},
-		{
-			size: 34,
-			title: "s",
-		},
-	];
+	// const sizes = [
+	// 	{
+	// 		size: 32,
+	// 		title: "xs",
+	// 	},
+	// 	{
+	// 		size: 34,
+	// 		title: "s",
+	// 	},
+	// ];
 	useEffect(() => {
 		setLoading(true);
 		axios.get(`https://fakestoreapi.com/products/${id}`).then(({ data }) => {
@@ -58,6 +58,12 @@ const SearchElemeent = () => {
 							<p className="searchpage__subtitle">Select size:</p>
 							<p className="searchpage__subtitle">Size guide</p>
 						</div>
+						<input
+							type="text"
+							className="searchpage__input"
+							placeholder="Size"
+						/>
+						<button className="searchpage__add-btn">Add to cart</button>
 						<h2 className="searchpage__subdetails">Product details:</h2>
 						<p className="searchpage__subinfo">{description}</p>
 					</div>

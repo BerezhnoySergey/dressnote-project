@@ -22,6 +22,9 @@
 }
 .cards__item {
 	width: 255px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
 }
 .slider__img2 {
 	background: url("../scss/img/slider22.jpg");
@@ -73,25 +76,82 @@
 	background: none;
 	margin-bottom: 10px;
 }
-.slider__sub-text {
+.card__sub-title {
+	font-weight: 700;
+	line-height: 18px;
+	color: #32313a;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-decoration: none;
+}
+.card__sub-text {
 	font-size: 13px;
 	line-height: 16px;
 	margin-bottom: 10px;
+	text-decoration: none;
 }
-
+.card__sub-description {
+	display: -webkit-box;
+	font-size: 13px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 16px;
+	color: #56555d;
+	text-decoration: none;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	margin: 10px 0 10px 0;
+}
 .slider__heart {
-	background: #f7f7f9;
 	border-radius: 100px;
+	background-color: #fff;
 	width: 24px;
 	height: 24px;
 	margin: 12px 12px 0 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: absolute;
+	&__heart-item {
+		background-color: unset;
+		border: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
-.slider__heart-item {
-	margin-top: 1px;
-	color: rgba(110, 109, 116, 1);
+.card__heart {
+	// border-radius: 100px;
+	// background-color: #fff;
+	// width: 24px;
+	// height: 24px;
+	// margin: 12px 12px 0 0;
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	position: absolute;
+	&-btn {
+		// width: 16px;
+		// height: 14px;
+		background-color: unset;
+		border: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&-item {
+		width: 14px;
+		height: 14px;
+		cursor: pointer;
+		margin-left: 240px;
+		&:hover {
+			color: #ed83a8;
+		}
+	}
+}
+.card__heart-item_active {
+	color: gold;
 }
 .glide__style {
 	position: unset;
@@ -104,11 +164,12 @@
 	width: 25px;
 	height: 25px;
 	cursor: pointer;
+	&-left {
+		color: #b5b5bc;
+		margin-right: 20px;
+	}
 }
-.arrow__glide-left {
-	color: #b5b5bc;
-	margin-right: 20px;
-}
+
 .slider__arrrow-wrap {
 	display: flex;
 	align-items: center;
