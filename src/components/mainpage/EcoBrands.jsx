@@ -2,7 +2,7 @@ import React from "react";
 import "./scss/EcoBrands.scss";
 const EcoBrands = () => {
 	return (
-		<div className="ecobrands__container">
+		<div className="ecobrands">
 			<div className="ecobrands__wrap">
 				<div className="story__container">
 					<h2 className="ecobrands__titile">

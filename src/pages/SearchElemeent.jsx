@@ -6,21 +6,14 @@ import "../components/SearchElemeent/StarRating/FuncStarRating.scss";
 import SliderTwo from "../components/mainpage/SliderTwo";
 import StarRating from "../components/SearchElemeent/StarRating/StarRating";
 import { Loader } from "../loader/Loader";
+import SizeSelection from "../components/sizeSelection/SizeSelection";
+import { AiFillHeart } from "react-icons/ai";
 
 const SearchElemeent = () => {
 	const [loading, setLoading] = useState(true);
 	const [productData, setProductData] = useState({});
 	const { id } = useParams();
-	// const sizes = [
-	// 	{
-	// 		size: 32,
-	// 		title: "xs",
-	// 	},
-	// 	{
-	// 		size: 34,
-	// 		title: "s",
-	// 	},
-	// ];
+
 	useEffect(() => {
 		setLoading(true);
 		axios.get(`https://fakestoreapi.com/products/${id}`).then(({ data }) => {
@@ -58,16 +51,19 @@ const SearchElemeent = () => {
 							<p className="searchpage__subtitle">Select size:</p>
 							<p className="searchpage__subtitle">Size guide</p>
 						</div>
-						<input
-							type="text"
-							className="searchpage__input"
-							placeholder="Size"
-						/>
-						<button className="searchpage__add-btn">Add to cart</button>
+						<SizeSelection></SizeSelection>
+						<div className="searchpage__heart-contain">
+							<button className="searchpage__add-btn">Add to cart</button>
+							<div className="searchpage__heart-wrap">
+								<AiFillHeart className="searchpage__heart-item"></AiFillHeart>
+							</div>
+						</div>
+
 						<h2 className="searchpage__subdetails">Product details:</h2>
 						<p className="searchpage__subinfo">{description}</p>
 					</div>
 				</div>
+
 				<SliderTwo></SliderTwo>
 			</div>
 		</div>

@@ -4,7 +4,7 @@ import "./scss/MainpageHero.scss";
 const MainPageHeroCards = () => {
 	return (
 		<>
-			<div className="maincards__container">
+			<div className="maincards">
 				<div className="maincards__wrap">
 					<div className="maincards__box">
 						<img

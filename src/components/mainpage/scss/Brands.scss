@@ -1,28 +1,26 @@
-.brands__container {
+.brands {
 	display: flex;
 	justify-content: center;
 	margin: 100px 0 100px;
-}
-.brands__wrap {
-	width: 1110px;
-	display: flex;
-	color: #32313a;
-	align-items: center;
-	justify-content: space-between;
-	font-size: 18px;
-	line-height: 24px;
-	text-decoration-line: underline;
-}
-
-.brands__newbalance {
-	cursor: pointer;
-	transition: color, transform 500ms ease;
-}
-.brands__newbalance:hover {
-	color: #ed83a8;
-	transform: scale(1.5);
-}
-
-.brands__link {
-	color: #32313a;
+	&__wrap {
+		width: 1110px;
+		display: flex;
+		color: #32313a;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 18px;
+		line-height: 24px;
+		text-decoration-line: underline;
+	}
+	&__newbalance {
+		cursor: pointer;
+		transition: color, transform 500ms ease;
+		&:hover {
+			color: #ed83a8;
+			transform: scale(1.5);
+		}
+	}
+	&__link {
+		color: #32313a;
+	}
 }

@@ -1,7 +1,3 @@
-// .header__btn-favorites {
-// 	border: none;
-// 	background-color: unset;
-// }
 .header__btn-heart {
 	width: 16px;
 	height: 16px;
@@ -9,12 +5,12 @@
 	cursor: pointer;
 	transition: color, transform 500ms ease;
 	margin-left: 25px;
+	&:hover {
+		color: #ed83a8;
+		transform: scale(1.5);
+	}
 }
-.header__btn-heart:hover,
-.header__btn-heart.active {
-	color: #ed83a8;
-	transform: scale(1.5);
-}
+
 .no__margin {
 	margin-left: 0;
 }

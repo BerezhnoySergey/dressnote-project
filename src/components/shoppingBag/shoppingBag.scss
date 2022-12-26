@@ -117,26 +117,26 @@
 		transition: color, transform 500ms ease;
 		align-items: flex-end;
 		&:hover {
-			color: #ed83a8;
 			transform: scale(1.3);
+			color: #ed83a8;
 		}
 	}
 	&__clear-bugicon {
 		color: #6e6d74;
 		height: 19px;
 		width: 17px;
-		&:hover {
-			color: #ed83a8;
-		}
+		// &:hover {
+		// 	color: #ed83a8;
+		// }
 	}
 	&__clear-text {
 		color: #6e6d74;
 		font-size: 14px;
 		line-height: 16px;
 		margin-left: 12px;
-		&:hover {
-			color: #ed83a8;
-		}
+		// &:hover {
+		// 	color: #ed83a8;
+		// }
 	}
 	&__finalprice-contain {
 		display: flex;

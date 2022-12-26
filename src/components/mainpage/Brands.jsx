@@ -8,7 +8,7 @@ import Ugg from "./img/ugg-australia.svg";
 
 const Brands = () => {
 	return (
-		<div className="brands__container">
+		<div className="brands">
 			<div className="brands__wrap">
 				<a
 					href="https://newbalance.ua/store/sale?gclid=Cj0KCQiA4uCcBhDdARIsAH5jyUmEMP2vTp5xB0C1TOLXMuZUgO4eBTFeG4jMK7Ng6nlh9jR-Hs1gM-oaAgexEALw_wcB"
@@ -50,7 +50,7 @@ const Brands = () => {
 					<img src={Ugg} alt="Ugg" className="brands__newbalance" />
 				</a>
 
-				<a href="/" className="brands__link">
+				<a href="/notfound" className="brands__link">
 					All brands
 				</a>
 			</div>

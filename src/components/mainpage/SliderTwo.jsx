@@ -20,11 +20,13 @@ const glideConfig = {
 
 const SliderTwo = ({ className = "glide" }) => {
 	const glide = new Glide(`.${className}`, glideConfig);
+
 	useEffect(() => {
 		glide.mount();
 	}, [glide]);
+
 	return (
-		<div className="slider__container">
+		<div className="slider">
 			<div className="slider__wrapper">
 				<div className="slider__wrp">
 					<div className={`${className} slider__width-fix`}>

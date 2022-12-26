@@ -97,25 +97,25 @@ const SearchBar = () => {
 const HeaderNav = () => {
 	return (
 		<>
-			<header className="navbar__contain">
+			<header className="navbar">
 				<nav className="navbar__item">
-					<div className="navbar">
+					<div className="navbar__wrap">
 						<a href="/newIn" className="navbar__link">
 							New in <FiChevronDown className="navbar__link-down" />
 						</a>
 						<a href="/SearchElemeent" className="navbar__link">
 							Clothing <FiChevronDown className="navbar__link-down" />
 						</a>
-						<a href="/" className="navbar__link">
+						<a href="/notfound" className="navbar__link">
 							Shoes <FiChevronDown className="navbar__link-down" />
 						</a>
-						<a href="/" className="navbar__link">
+						<a href="/notfound" className="navbar__link">
 							Accessories <FiChevronDown className="navbar__link-down" />
 						</a>
-						<a href="/" className="navbar__link">
+						<a href="/notfound" className="navbar__link">
 							Brands <FiChevronDown className="navbar__link-down" />
 						</a>
-						<a href="/" className="navbar__link navbar__link-last">
+						<a href="/notfound" className="navbar__link navbar__link-last">
 							Sale <FiChevronDown className="navbar__link-down" />
 						</a>
 					</div>

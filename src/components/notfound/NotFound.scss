@@ -1,0 +1,28 @@
+.notfound {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	&__img {
+		width: 700px;
+		height: 500px;
+	}
+	&__title {
+		margin-bottom: 30px;
+		color: #75747c;
+	}
+	&__btn {
+		width: 350px;
+		height: 40px;
+		background: #ffff;
+		cursor: pointer;
+		border: 1px solid #6e6d74;
+		border-radius: 2px;
+		margin-bottom: 60px;
+		&:hover {
+			transition: all 0.2s linear;
+			background: #ffa1bd;
+			color: #fff;
+		}
+	}
+}

@@ -9,34 +9,34 @@ import Dressnote from "./mainpage/img/DRESSNOTE.svg";
 const Footer = () => {
 	return (
 		<>
-			<div className="footer__container">
+			<div className="footer">
 				<div className="footer__wrap">
 					<div className="footer__support">
 						<ul className="footer__nav-list">
-							<li className="footer___nav-item">
+							<li className="footer__nav-item">
 								<a
 									href="/"
-									className="footer__nav-link nav__link-bolt footer___nav-item-botoom "
+									className="footer__nav-link nav__link-bolt footer__nav-item-botoom "
 								>
 									Customer support
 								</a>
 							</li>
-							<li className="footer___nav-item">
+							<li className="footer__nav-item">
 								<a href="/" className="footer__nav-link">
 									Size guides
 								</a>
 							</li>
-							<li className="footer___nav-item">
+							<li className="footer__nav-item">
 								<a href="/" className="footer__nav-link">
 									Shipping
 								</a>
 							</li>
-							<li className="footer___nav-item">
+							<li className="footer__nav-item">
 								<a href="/" className="footer__nav-link">
 									Returns
 								</a>
 							</li>
-							<li className="footer___nav-item footer___nav-item-nobotoom">
+							<li className="footer__nav-item footer__nav-item-nobotoom">
 								<a href="/" className="footer__nav-link">
 									Track my order
 								</a>
@@ -46,30 +46,30 @@ const Footer = () => {
 
 					<div className="footer__support">
 						<ul className="footer__nav-list">
-							<li className="footer___nav-item">
+							<li className="footer__nav-item">
 								<a
 									href="/"
-									className="footer__nav-link nav__link-bolt footer___nav-item-botoom "
+									className="footer__nav-link nav__link-bolt footer__nav-item-botoom "
 								>
 									My account
 								</a>
 							</li>
-							<li className="footer___nav-item">
+							<li className="footer__nav-item">
 								<a href="/" className="footer__nav-link">
 									Order history
 								</a>
 							</li>
-							<li className="footer___nav-item">
+							<li className="footer__nav-item">
 								<a href="/" className="footer__nav-link">
 									Payment methods
 								</a>
 							</li>
-							<li className="footer___nav-item">
+							<li className="footer__nav-item">
 								<a href="/" className="footer__nav-link">
 									Account settings
 								</a>
 							</li>
-							<li className="footer___nav-item footer___nav-item-nobotoom">
+							<li className="footer__nav-item footer__nav-item-nobotoom">
 								<a href="/" className="footer__nav-link">
 									Favorites
 								</a>

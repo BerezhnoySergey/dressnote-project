@@ -6,7 +6,7 @@ const clothingReducer = createReducer({ clothing: [] }, (builder) => {
 			return { ...store, loading: true };
 		})
 		.addCase("USER_LOADING_SUCCESS", (store, action) => {
-			return { ...store, loading: false, clothingWomen: action.payload };
+			return { ...store, loading: false, clothing: action.payload };
 		})
 		.addCase("USER_LOADING_FAILED", (store, action) => {
 			return { ...store, loading: false, error: action.payload };

@@ -15,9 +15,7 @@ import NetworkError from "../loader/networkError.gif";
 
 const NewIn = () => {
 	const dispatch = useDispatch();
-	const { loading, error, clothingWomen } = useSelector(
-		(store) => store.clothing
-	);
+	const { loading, error, clothing } = useSelector((store) => store.clothing);
 
 	useEffect(() => {
 		dispatch(clothingLoading());
@@ -54,8 +52,8 @@ const NewIn = () => {
 								{loading ? (
 									<Loader />
 								) : (
-									clothingWomen &&
-									clothingWomen.map((item) => {
+									clothing &&
+									clothing.map((item) => {
 										return (
 											<Cards
 												value={item}

@@ -2,12 +2,12 @@ import React from "react";
 import "./scss/HeaderSale.scss";
 const HeaderSale = () => {
 	return (
-		<div className="container__headsale">
-			<div className="container__sale pulse">
-				<h1 className="container__saletext">
+		<div className="headsale">
+			<div className="headsale__wrap pulse">
+				<h1 className="headsale__title">
 					Up to 50% off all dresses when use code DRESSLOVER
 				</h1>
-				<a href="/dressnote" className="headsale__link">
+				<a href="/notfound" className="headsale__link">
 					Shop dresses
 				</a>
 			</div>

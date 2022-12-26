@@ -5,6 +5,7 @@ import Glide from "@glidejs/glide";
 import { useEffect } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
+
 const glideConfig = {
 	perView: 4,
 	startAt: 0,
@@ -19,11 +20,13 @@ const glideConfig = {
 
 const Slider = ({ className = "glide" }) => {
 	const glide = new Glide(`.${className}`, glideConfig);
+
 	useEffect(() => {
 		glide.mount();
 	}, [glide]);
+
 	return (
-		<div className="slider__container">
+		<div className="slider">
 			<div className="slider__wrapper">
 				<div className="slider__wrp">
 					<div className={className}>

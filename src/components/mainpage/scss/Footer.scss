@@ -1,34 +1,73 @@
-.footer__container {
+.footer {
 	display: flex;
 	justify-content: center;
 	background: #f7f7f9;
+	&__wrap {
+		width: 1110px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__nav-list {
+		list-style: none;
+	}
+	&__nav-link {
+		color: #6e6d74;
+		text-decoration: none;
+		&:hover {
+			color: #ed83a8;
+			transition: all 300ms linear;
+		}
+	}
+	&__nav-item {
+		margin-bottom: 20px;
+	}
+	&__nav-item-botoom {
+		margin-bottom: 18px;
+	}
+	&__nav-item-nobotoom {
+		margin-bottom: 0px;
+	}
+	&__support {
+		margin: 70px 0 78px;
+	}
+	&__email-text {
+		color: #6e6d74;
+		width: 540px;
+		font-size: 14px;
+		line-height: 22px;
+		margin-bottom: 25px;
+	}
+	&__socials {
+		width: 200px;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__socials-item {
+		cursor: pointer;
+		transition: color, transform 500ms ease;
+		&:hover {
+			transform: scale(1.2);
+			color: #ed83a8;
+		}
+	}
+	&__dress {
+		display: flex;
+		justify-content: center;
+	}
+	&__dress-wrap {
+		width: 1110px;
+		display: flex;
+		margin: 20px;
+		justify-content: space-between;
+	}
+	&__copyright {
+		font-size: 14px;
+		line-height: 22px;
+		color: #86858b;
+	}
 }
-.footer__wrap {
-	width: 1110px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-.footer__nav-list {
-	list-style: none;
-}
-.footer__nav-link {
-	color: #6e6d74;
-	text-decoration: none;
-}
-.footer__nav-link:hover {
-	color: #ed83a8;
-	transition: all 300ms linear;
-}
-.footer___nav-item {
-	margin-bottom: 20px;
-}
-.footer___nav-item-botoom {
-	margin-bottom: 18px;
-}
-.footer___nav-item-nobotoom {
-	margin-bottom: 0px;
-}
+
 .nav__link-bolt {
 	font-weight: 600;
 	font-size: 16px;
@@ -36,16 +75,7 @@
 	color: #32313a;
 	margin-bottom: 18px;
 }
-.footer__support {
-	margin: 70px 0 78px;
-}
-.footer__email-text {
-	color: #6e6d74;
-	width: 540px;
-	font-size: 14px;
-	line-height: 22px;
-	margin-bottom: 25px;
-}
+
 .email__form {
 	margin-bottom: 40px;
 }
@@ -73,32 +103,4 @@
 	color: #86858b;
 	padding: 10px;
 	outline: none;
-}
-.footer__socials {
-	width: 200px;
-	display: flex;
-	justify-content: space-between;
-}
-.footer__socials-item {
-	cursor: pointer;
-	transition: color, transform 500ms ease;
-}
-.footer__socials-item:hover {
-	transform: scale(1.2);
-	color: #ed83a8;
-}
-.footer__dress {
-	display: flex;
-	justify-content: center;
-}
-.footer__dress-wrap {
-	width: 1110px;
-	display: flex;
-	margin: 20px;
-	justify-content: space-between;
-}
-.footer__copyright {
-	font-size: 14px;
-	line-height: 22px;
-	color: #86858b;
 }
