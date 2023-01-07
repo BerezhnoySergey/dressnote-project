@@ -5,6 +5,7 @@ import Marttens from "./img/Marttens.svg";
 import Converse from "./img/converse.svg";
 import Steve from "./img/steve.svg";
 import Ugg from "./img/ugg-australia.svg";
+import { Link } from "react-router-dom";
 
 const Brands = () => {
 	return (
@@ -50,9 +51,9 @@ const Brands = () => {
 					<img src={Ugg} alt="Ugg" className="brands__newbalance" />
 				</a>
 
-				<a href="/notfound" className="brands__link">
+				<Link to="/notfound" className="brands__link">
 					All brands
-				</a>
+				</Link>
 			</div>
 		</div>
 	);

@@ -1,6 +1,7 @@
 import React from "react";
 
-import "../components/newIn/newIn.scss";
+import "../newIn/newIn.scss";
+
 const Loader = () => {
 	return (
 		<div className="lds-ring ">

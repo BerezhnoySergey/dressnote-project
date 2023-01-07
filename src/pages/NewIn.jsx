@@ -6,12 +6,12 @@ import {
 	clothingLoading,
 	clothingLoadingSuccess,
 	clothingLoadingFailed,
-} from "../components/redux/actions/clothingAction";
+} from "../redux/actions/clothingAction";
 import Cards from "../components/mainpage/Cards";
 import "../components/newIn/newIn.scss";
 import fotonewIn from "../components/newIn/img/nawIn.webp";
-import { Loader } from "../loader/Loader";
-import NetworkError from "../loader/networkError.gif";
+import { Loader } from "../components/loader/Loader";
+import NetworkError from "../components/loader/networkError.gif";
 
 const NewIn = () => {
 	const dispatch = useDispatch();

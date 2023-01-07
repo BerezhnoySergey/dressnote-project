@@ -14,15 +14,17 @@
 	&__btn {
 		width: 350px;
 		height: 40px;
-		background: #ffff;
+		background: #32313a;
 		cursor: pointer;
-		border: 1px solid #6e6d74;
+		border: none;
+		color: #e6e5e8;
 		border-radius: 2px;
 		margin-bottom: 60px;
+		font-size: 14px;
 		&:hover {
 			transition: all 0.2s linear;
 			background: #ffa1bd;
-			color: #fff;
+			color: #e6e5e8;
 		}
 	}
 }

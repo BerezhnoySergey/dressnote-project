@@ -6,6 +6,8 @@ import Twitter from "./mainpage/img/twitter.svg";
 import Pinterest from "./mainpage/img/pinterest.svg";
 import Youtube from "./mainpage/img/youtube.svg";
 import Dressnote from "./mainpage/img/DRESSNOTE.svg";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
 	return (
 		<>
@@ -49,7 +51,7 @@ const Footer = () => {
 							<li className="footer__nav-item">
 								<a
 									href="/"
-									className="footer__nav-link nav__link-bolt footer__nav-item-botoom "
+									className="footer__nav-link nav__link-bolt footer__nav-item-botoom"
 								>
 									My account
 								</a>
@@ -122,9 +124,9 @@ const Footer = () => {
 			</div>
 			<div className="footer__dress">
 				<div className="footer__dress-wrap">
-					<a href="/dressnote">
+					<Link to="/dressnote">
 						<img src={Dressnote} alt="Dressnote" />
-					</a>
+					</Link>
 					<p className="footer__copyright">&copy; 2021 All rights reserved</p>
 				</div>
 			</div>

@@ -88,6 +88,9 @@
 			color: #ed83a8;
 			transform: scale(1.5);
 		}
+		&__cards-count {
+			width: 10px;
+		}
 	}
 	&__cards-plus {
 		cursor: pointer;
@@ -107,21 +110,22 @@
 			transform: scale(1.5);
 		}
 	}
-	&__borderbottom {
-		border-bottom: 1px solid #e6e5e8;
-		border-top: unset;
+	&__border-top {
+		border-top: 1px solid #e6e5e8;
 	}
 	&__clear-form {
 		display: flex;
 		cursor: pointer;
 		transition: color, transform 500ms ease;
 		align-items: flex-end;
+		border: none;
+		background: none;
 		&:hover {
 			transform: scale(1.3);
 			color: #ed83a8;
 		}
 	}
-	&__clear-bugicon {
+	&__clear-btn {
 		color: #6e6d74;
 		height: 19px;
 		width: 17px;
@@ -134,15 +138,13 @@
 		font-size: 14px;
 		line-height: 16px;
 		margin-left: 12px;
-		// &:hover {
-		// 	color: #ed83a8;
-		// }
 	}
 	&__finalprice-contain {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		margin: 18px 0 50px 0;
+		padding-top: 16px;
 	}
 	&__finalprice-wrap {
 		display: flex;
@@ -158,6 +160,25 @@
 		line-height: 16px;
 		color: #32313a;
 		margin-left: 24px;
+	}
+	&__svg {
+		width: 400px;
+	}
+	&__wrapper-noitem {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__noitem-title {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 24px;
+		color: #56555d;
+	}
+	&__btn-back {
+		margin: 30px 0 30px;
+		border: none;
+		color: #fff;
 	}
 }
 

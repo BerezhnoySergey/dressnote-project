@@ -1,0 +1,66 @@
+.favorites {
+	display: flex;
+	justify-content: center;
+	&__wrap {
+		width: 1110px;
+		display: flex;
+		flex-direction: column;
+	}
+	&__wrap-notfound {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		margin: 180px 0 100px;
+		align-items: center;
+	}
+	&__noitem-btn {
+		background: #32313a;
+		border: none;
+		color: #fff;
+	}
+	&__card-wrap {
+		display: flex;
+		flex-direction: column;
+	}
+	&__card-contain {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 26px;
+		line-height: 36px;
+		color: #32313a;
+		margin: 40px 0 8px;
+	}
+	&__card {
+		margin: 20px 22px 20px 0;
+	}
+	&__btn-move {
+		border: 1px solid #e6e5e8;
+		border-radius: 2px;
+		width: 255px;
+		height: 36px;
+		cursor: pointer;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 16px;
+		background: #fff;
+		color: #b5b5bc;
+		&:hover {
+			border: 1px solid #6e6d74;
+			color: #32313a;
+			transition: all 0.2s linear;
+		}
+	}
+	&__link-btn {
+		height: 36px;
+	}
+	&__img-heart {
+		width: 75px;
+	}
+	&__card-contain-item {
+		margin-right: 20px;
+		margin-bottom: 30px;
+	}
+}

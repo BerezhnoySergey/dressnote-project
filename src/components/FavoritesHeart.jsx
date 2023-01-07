@@ -1,5 +1,8 @@
 import React, { useDispatch, useSelector } from "react-redux";
-import { favoritesAdd, favoritesRemove } from "./redux/actions/favoritesAction";
+import {
+	favoritesAdd,
+	favoritesRemove,
+} from "../redux/actions/favoritesAction";
 import { AiFillHeart } from "react-icons/ai";
 import "../components/newIn/newIn.scss";
 

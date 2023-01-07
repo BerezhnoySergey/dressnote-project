@@ -145,29 +145,23 @@
 	}
 }
 .card__heart {
-	// border-radius: 100px;
-	// background-color: #fff;
-	// width: 24px;
-	// height: 24px;
-	// margin: 12px 12px 0 0;
-	// display: flex;
-	// align-items: center;
-	// justify-content: center;
 	position: absolute;
 	&-btn {
-		// width: 16px;
-		// height: 14px;
-		background-color: unset;
+		background-color: whitesmoke;
 		border: 0;
+		height: 24px;
+		margin-left: 240px;
+		width: 24px;
+		border-radius: 100%;
 		display: flex;
-		justify-content: center;
 		align-items: center;
 	}
 	&-item {
 		width: 14px;
 		height: 14px;
 		cursor: pointer;
-		margin-left: 240px;
+		margin-left: 5px;
+		position: absolute;
 		&:hover {
 			color: #ed83a8;
 		}

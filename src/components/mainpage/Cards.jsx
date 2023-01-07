@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
 	favoritesAdd,
 	favoritesRemove,
-} from "../redux/actions/favoritesAction";
+} from "../../redux/actions/favoritesAction";
 
 const Cards = ({ value }) => {
 	const { image, price, title, description, id } = value;
@@ -30,7 +30,7 @@ const Cards = ({ value }) => {
 	return (
 		<div className="cards__wrapps">
 			<div className="cards__item">
-				<img src={image} className="bg__img-cards" alt="" />
+				<img src={image} className="bg__img-cards" alt="image-cards" />
 				<div className="card__heart">
 					<button
 						className="card__heart-btn"
@@ -45,12 +45,12 @@ const Cards = ({ value }) => {
 						></AiFillHeart>
 					</button>
 				</div>
-				<Link>
+				<Link to={`/product/${id}`}>
 					<p className="card__sub-title" title={title}>
 						{title}
 					</p>
 				</Link>
-				<Link>
+				<Link to="/favorites">
 					<p className="card__sub-description">{description}</p>
 				</Link>
 				<p className="card__sub-text">${price}</p>

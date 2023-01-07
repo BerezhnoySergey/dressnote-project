@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "../SearchElemeent/SearchElemeent.scss";
 import { FiChevronDown } from "react-icons/fi";
-const SizeSelection = () => {
-	const [selectSize, setSelectSize] = useState(null);
+
+const SizeSelection = ({ setSelectSize, selectSize }) => {
 	const [openSelect, setOpenSelect] = useState(true);
 	const sizes = [
 		{

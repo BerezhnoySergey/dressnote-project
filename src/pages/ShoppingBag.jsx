@@ -1,128 +1,82 @@
 import React from "react";
 import "../components/shoppingBag/shoppingBag.scss";
-import ShoppingImg from "../components/shoppingBag/img/shopingbag.jpg";
-import ShoppingImg2 from "../components/shoppingBag/img/shoppingbag2.jpg";
-import { FiTrash } from "react-icons/fi";
-import { AiOutlineMinus } from "react-icons/ai";
-import { AiOutlinePlus } from "react-icons/ai";
-import { VscChromeClose } from "react-icons/vsc";
 import SliderTwo from "../components/mainpage/SliderTwo";
 import Brands from "../components/mainpage/Brands";
+import { useSelector } from "react-redux";
+import BagItem from "../components/shoppingBag/BagItem";
+import { useState } from "react";
+import { useEffect } from "react";
+import FinalOrder from "../components/shoppingBag/FinalOrder";
+import ClearBag from "../components/shoppingBag/ClearBag";
+import "../components/notfound/NotFound.scss";
 
 const ShoppingBag = () => {
+	const shopingCart = useSelector((store) => store.cart);
+	const [subtotal, setSubtotal] = useState(0);
+
+	useEffect(() => {
+		const sum = shopingCart.reduce((accumulator, item) => {
+			return accumulator + item.price * item.count;
+		}, 0);
+		const shippingsum = shopingCart.reduce((accumulator, item) => {
+			return accumulator + item.costDelivery * item.count;
+		}, 0);
+		setSubtotal({ sum, shippingsum });
+	}, [shopingCart]);
+
+	if (shopingCart.length > 0) {
+		return (
+			<div className="shoppbag">
+				<div className="shoppbag__wrap">
+					<h1 className="shoppbag__title">Shopping bag</h1>
+					<div className="shoppbag__contain">
+						<div className="shoppbag__item-container">
+							<div className="shoppbag__item-sub">
+								<p className="shoppbag__sub">Item</p>
+								<div className="shoppbag__item-sub-block">
+									<p className="shoppbag__sub-price shoppbag__sub">Price</p>
+									<p className="shoppbag__sub-quantity shoppbag__sub">
+										Quantity
+									</p>
+									<p className="shoppbag__sub-total shoppbag__sub">Total</p>
+								</div>
+							</div>
+							{shopingCart.map((item, index) => {
+								return <BagItem key={`bag__item-${index}`} {...item} />;
+							})}
+							<ClearBag subtotal={subtotal.sum} />
+						</div>
+
+						<FinalOrder
+							subtotal={subtotal.sum}
+							shippingsum={subtotal.shippingsum}
+						/>
+					</div>
+					<SliderTwo />
+					<Brands />
+				</div>
+			</div>
+		);
+	}
 	return (
 		<div className="shoppbag">
 			<div className="shoppbag__wrap">
-				<h1 className="shoppbag__title">Shopping bag</h1>
-				<div className="shoppbag__contain">
-					<div className="shoppbag__item-container">
-						<div className="shoppbag__item-sub">
-							<p className="shoppbag__sub">Item</p>
-							<div className="shoppbag__item-sub-block">
-								<p className="shoppbag__sub-price shoppbag__sub">Price</p>
-								<p className="shoppbag__sub-quantity shoppbag__sub">Quantity</p>
-								<p className="shoppbag__sub-total shoppbag__sub">Total</p>
-							</div>
-						</div>
-						<div className="shoppbag__cards-wrap shoppbag__item-container">
-							<img src={ShoppingImg} alt="" className="shoppbag__img" />
-							<div className="shoppbag__img-wrap">
-								<p className="shoppbag__cards-sub">Misguided</p>
-								<p className="shoppbag__cards-title">
-									Printed poplin dress with puff sleeves
-								</p>
-								<p className="shoppbag__cards-sub">
-									<span className="shoppbag__cards-sub">
-										White/Red patterned
-									</span>
-								</p>
-								<p className="shoppbag__cards-sub">
-									Size: <span className="shoppbag__cards-sub">Size:</span>
-								</p>
-							</div>
-							<div className="shoppbag__cards-infotext">
-								<p className="shoppbag__cards-price">$44.90</p>
-								<AiOutlineMinus className="shoppbag__cards-minus"></AiOutlineMinus>
-								<p>1</p>
-								<AiOutlinePlus className="shoppbag__cards-plus"></AiOutlinePlus>
-								<p>$44.90</p>
-								<VscChromeClose className="shoppbag__cards-cross"></VscChromeClose>
-							</div>
-						</div>
-
-						<div className="shoppbag__cards-wrap shoppbag__item-container shoppbag__borderbottom">
-							<img src={ShoppingImg2} alt="" className="shoppbag__img" />
-							<div className="shoppbag__img-wrap">
-								<p className="shoppbag__cards-sub">Misguided</p>
-								<p className="shoppbag__cards-title">
-									Printed poplin dress with puff sleeves
-								</p>
-								<p className="shoppbag__cards-sub">
-									<span className="shoppbag__cards-sub">
-										White/Red patterned
-									</span>
-								</p>
-								<p className="shoppbag__cards-sub">
-									Size: <span className="shoppbag__cards-sub">Size:</span>
-								</p>
-							</div>
-							<div className="shoppbag__cards-infotext">
-								<p className="shoppbag__cards-price">$44.90</p>
-								<AiOutlineMinus className="shoppbag__cards-minus"></AiOutlineMinus>
-								<p>1</p>
-								<AiOutlinePlus className="shoppbag__cards-plus"></AiOutlinePlus>
-								<p>$44.90</p>
-								<VscChromeClose className="shoppbag__cards-cross"></VscChromeClose>
-							</div>
-						</div>
-						<div className="shoppbag__finalprice-contain">
-							<form className="shoppbag__clear-form">
-								<FiTrash className="shoppbag__clear-bugicon" />
-								<p className="shoppbag__clear-text"> Clear bag</p>
-							</form>
-							<div className="shoppbag__finalprice-wrap">
-								<p className="shoppbag__finalprice-sub ">
-									Subtotal:
-									<span className="shoppbag__finalprice"> $110.80</span>
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<div className="finalorder">
-						<h2 className="finalorder__title">Order summary</h2>
-						<div className="finalorder__subwrap">
-							<p className="finalorder__sub">Subtotal</p>
-							<p className="finalorder__sub">$110.80</p>
-						</div>
-						<div className="finalorder__subwrap finalorder__subwrapp">
-							<p className="finalorder__sub">Shipping</p>
-							<p className="finalorder__sub">$5.95</p>
-						</div>
-						<p className="shoppbag__cards-sub">
-							Spend $50 more to get free shipping!
-						</p>
-						<form className="finalorder__form">
-							<input
-								type="text"
-								className="finalorder__input"
-								placeholder="Promocode"
-							/>
-							<button className="finalorder__btn"> Apply</button>
-						</form>
-						<div className="finalorder__subwrap finalorder__wrap-total">
-							<p className="finalorder__order-total">Order total</p>
-							<p className="finalorder__order-total">$116.75</p>
-						</div>
-						<button className="finalorder__checkout-btn">
-							Proceed to checkout
+				<div className="shoppbag__wrapper-noitem">
+					<img
+						src="https://media0.giphy.com/media/qRPrMNzJtkV0GOVPTk/giphy.gif?cid=6c09b952aae68ff897d38b1d15097bec65240ef2e0db8fab&amp;rid=giphy.gif&amp;ct=s"
+						alt="Shop__svg"
+						className="shoppbag__svg"
+					/>
+					<p className="shoppbag__noitem-title">Your goat is empty!</p>
+					<p className="shoppbag__noitem-title">
+						It's never too late to fix it =)
+					</p>
+					<form action="/Dressnote">
+						<button className="notfound__btn shoppbag__btn-back">
+							Back to shopping
 						</button>
-					</div>
+					</form>
 				</div>
-
-				<SliderTwo></SliderTwo>
-
-				<Brands></Brands>
 			</div>
 		</div>
 	);

@@ -10,7 +10,7 @@ import {
 	clothingLoading,
 	clothingLoadingSuccess,
 	clothingLoadingFailed,
-} from "../redux/actions/clothingAction";
+} from "../../redux/actions/clothingAction";
 
 const SearchBar = () => {
 	const [searchInput, setSearchInput] = useState("");
@@ -100,24 +100,24 @@ const HeaderNav = () => {
 			<header className="navbar">
 				<nav className="navbar__item">
 					<div className="navbar__wrap">
-						<a href="/newIn" className="navbar__link">
+						<Link to="/newIn" className="navbar__link">
 							New in <FiChevronDown className="navbar__link-down" />
-						</a>
-						<a href="/SearchElemeent" className="navbar__link">
+						</Link>
+						<Link to="/notfound" className="navbar__link">
 							Clothing <FiChevronDown className="navbar__link-down" />
-						</a>
-						<a href="/notfound" className="navbar__link">
+						</Link>
+						<Link to="/notfound" className="navbar__link">
 							Shoes <FiChevronDown className="navbar__link-down" />
-						</a>
-						<a href="/notfound" className="navbar__link">
+						</Link>
+						<Link to="/notfound" className="navbar__link">
 							Accessories <FiChevronDown className="navbar__link-down" />
-						</a>
-						<a href="/notfound" className="navbar__link">
+						</Link>
+						<Link to="/notfound" className="navbar__link">
 							Brands <FiChevronDown className="navbar__link-down" />
-						</a>
-						<a href="/notfound" className="navbar__link navbar__link-last">
+						</Link>
+						<Link to="/notfound" className="navbar__link navbar__link-last">
 							Sale <FiChevronDown className="navbar__link-down" />
-						</a>
+						</Link>
 					</div>
 
 					<SearchBar />

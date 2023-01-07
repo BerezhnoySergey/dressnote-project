@@ -1,18 +1,21 @@
 import React from "react";
 import "./scss/MainpageHero.scss";
-
+import { Link } from "react-router-dom";
 const MainPageHeroCards = () => {
 	return (
 		<>
 			<div className="maincards">
 				<div className="maincards__wrap">
 					<div className="maincards__box">
-						<img
-							src="./images/mainpage/image66.jpg"
-							alt="foto"
-							className="maincadrs__img"
-						/>
-						<button className="maincards__btn">Dresses</button>
+						<Link to={`/newIn`}>
+							<img
+								src="./images/mainpage/image66.jpg"
+								alt="foto"
+								className="maincadrs__img"
+							/>
+
+							<button className="maincards__btn">Dresses</button>
+						</Link>
 					</div>
 
 					<div className="maincards__box">
