@@ -16,7 +16,7 @@ const cartReduсer = createReducer([], (builder) => {
 			];
 		})
 		.addCase("CART_REMUVE", (store, { payload }) => {
-			const data = store.filter((item) => item.id !== payload.id);
+			const data = store.filter((item) => item.itemId !== payload.itemId);
 			return data;
 		})
 		.addCase("CART_REMUVE_ALL", () => {

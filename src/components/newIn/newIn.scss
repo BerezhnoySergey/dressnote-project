@@ -151,3 +151,33 @@
 .networkerror__item {
 	width: 100px;
 }
+
+.search__bar {
+	width: 255px;
+	margin-right: 30px;
+	margin-top: 80px;
+	&-title {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 18px;
+		color: #32313a;
+		margin-bottom: 16px;
+	}
+	&-nav_link {
+		list-style-type: none;
+		margin-bottom: 16px;
+		font-size: 14px;
+		line-height: 16px;
+		:hover {
+			color: #ed83a8;
+			transition: all 0.3s linear;
+		}
+	}
+	&-nav_item {
+		text-decoration: none;
+		color: #4a4951;
+	}
+	&-nav_wrap {
+		border-bottom: 1px solid #e6e5e8;
+	}
+}

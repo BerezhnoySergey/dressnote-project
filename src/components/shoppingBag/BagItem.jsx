@@ -6,7 +6,7 @@ import { useState } from "react";
 import "../../components/shoppingBag/shoppingBag.scss";
 import { cartItemPatch } from "../../redux/actions/cartAction";
 import { useDispatch } from "react-redux";
-
+import { cartRemuve } from "../../redux/actions/cartAction";
 const BagItem = ({
 	image,
 	category,
@@ -54,7 +54,13 @@ const BagItem = ({
 					}}
 				></AiOutlinePlus>
 				<p>${Math.ceil(price * count)}</p>
-				<VscChromeClose className="shoppbag__cards-cross"></VscChromeClose>
+				<VscChromeClose
+					className="shoppbag__cards-cross"
+					onClick={() => {
+						setCount(count);
+						dispatch(cartRemuve({ itemId }));
+					}}
+				></VscChromeClose>
 			</div>
 		</div>
 	);

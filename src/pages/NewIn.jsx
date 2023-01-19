@@ -12,6 +12,7 @@ import "../components/newIn/newIn.scss";
 import fotonewIn from "../components/newIn/img/nawIn.webp";
 import { Loader } from "../components/loader/Loader";
 import NetworkError from "../components/loader/networkError.gif";
+import NavBar from "../components/newIn/NavBar";
 
 const NewIn = () => {
 	const dispatch = useDispatch();
@@ -32,6 +33,7 @@ const NewIn = () => {
 		<>
 			<div className="nawIn__wrap">
 				<div className="nawIn__contain">
+					<NavBar />
 					<div className="nawIn__inner">
 						<div className="fotonewIn__wrap">
 							<h2 className="fotonewIn__title">New in</h2>

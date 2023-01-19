@@ -1,8 +1,9 @@
 .signin {
-	width: 1440px;
+	display: flex;
+	justify-content: center;
 	&__wrap {
+		width: 1440px;
 		display: flex;
-		justify-content: center;
 	}
 	&__img {
 		width: 760px;

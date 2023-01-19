@@ -7,7 +7,7 @@ import SearchElemeent from "./pages/SearchElemeent";
 import ShoppingBag from "./pages/ShoppingBag";
 import NotFound from "./components/notfound/NotFound";
 import Favorites from "./pages/Favorites";
-import SignIn from "./components/signIn/SignIn";
+import SignIn from "./pages/SignIn";
 
 function App() {
 	return (

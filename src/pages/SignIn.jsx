@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "../signIn/SignIn.scss";
-import SignImg from "../signIn/img/signin.webp";
-import CreateAccount from "./CreateAccount";
+// import { Link } from "react-router-dom";
+import "../components/signIn/SignIn.scss";
+import SignImg from "../components/signIn/img/signin.webp";
+import CreateAccount from "../components/signIn/CreateAccount";
 
 const SignIn = () => {
 	return (
