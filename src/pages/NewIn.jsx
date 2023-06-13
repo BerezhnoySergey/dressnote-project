@@ -59,10 +59,6 @@ const NewIn = () => {
 										return (
 											<Cards
 												value={item}
-												// image={image}
-												// price={price}
-												// title={title}
-												// description={description}
 												key={`newInItems__${item.id}`}
 											></Cards>
 										);
